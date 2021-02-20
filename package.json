@@ -1,0 +1,16 @@
+{
+  "name": "scrabble",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Simple Scrabble Game",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Bienvenue sur yarn\"",
+    "webpack": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch"
+  },
+  "dependencies": {
+    "webpack": "^5.23.0",
+    "webpack-cli": "^4.5.0"
+  }
+}
