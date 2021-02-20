@@ -10,6 +10,6 @@ Une lettre du premier mot doit être placée sur la case centrale (peu importe l
 
 # Instructions
 
--- git clone https://github.com/RachidEttabaai/Scrabble
--- yarn install
--- yarn watch (or yarn webpack)
+- git clone https://github.com/RachidEttabaai/Scrabble
+- yarn install
+- yarn watch (or yarn webpack)
