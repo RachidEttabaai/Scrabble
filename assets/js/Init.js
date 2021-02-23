@@ -1,8 +1,10 @@
 import createBoard from "./Board.js"
 
-export default function Init(){
+const rows = 15
 
-    let scrabbleboard = createBoard(15)
+const scrabbleboard = createBoard(rows)
+
+export default function Init(){
 
     let word = prompt("Saisir un mot: ")
     let sens = prompt("Sens pour le mot (de gauche vers la droite [LtoR] ou du haut vers le bas [UtoD]): ")
