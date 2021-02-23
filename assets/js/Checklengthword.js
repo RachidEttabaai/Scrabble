@@ -23,5 +23,7 @@ export default function Checklengthword(board,word,sens){
         
         console.log(board)
 
+        document.location.reload()
+
     }
 }

@@ -13,8 +13,6 @@ export default function Init(){
         let sens = prompt("Sens pour le mot (de gauche vers la droite [LtoR] ou du haut vers le bas [UtoD]): ")
 
         checkWord(scrabbleboard,word,sens)
-
-        document.location.reload();
         
     })
 
