@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./assets/js/Checklengthword.js":
+/*!**************************************!*\
+  !*** ./assets/js/Checklengthword.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Checklengthword)\n/* harmony export */ });\n\nfunction Checklengthword(board,word,sens){\n\n    if(word.length == 0 || word.length > 16 || word == null){\n        alert(\"erreur!!!\")\n    }else{\n        console.log(word)\n        if(sens == \"LtoR\")\n        {\n            for (let index = 0; index < word.length; index++) \n            {\n                board[0][index] = word[index]\n            }\n        }else if(sens == \"UtoD\")\n        {\n            for (let index = 0; index < word.length; index++) \n            {\n                board[index][0] = word[index]\n            }\n        }else{\n            console.error(\"erreur sur le sens !!!\")\n        }\n        \n        console.log(board)\n\n    }\n}\n\n//# sourceURL=webpack://scrabble/./assets/js/Checklengthword.js?");
+
+/***/ }),
+
 /***/ "./assets/js/Init.js":
 /*!***************************!*\
   !*** ./assets/js/Init.js ***!
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Init)\n/* harmony export */ });\n/* harmony import */ var _Board_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Board.js */ \"./assets/js/Board.js\");\n\n\nconst rows = 15\n\nconst scrabbleboard = (0,_Board_js__WEBPACK_IMPORTED_MODULE_0__.default)(rows)\n\nfunction Init(){\n\n    let word = prompt(\"Saisir un mot: \")\n    let sens = prompt(\"Sens pour le mot (de gauche vers la droite [LtoR] ou du haut vers le bas [UtoD]): \")\n\n    if(word.length == 0 || word.length > 16){\n        alert(\"erreur!!!\")\n    }else{\n        console.log(word)\n        if(sens == \"LtoR\")\n        {\n            for (let index = 0; index < word.length; index++) \n            {\n                scrabbleboard[0][index] = word[index]\n            }\n        }else if(sens == \"UtoD\")\n        {\n            for (let index = 0; index < word.length; index++) \n            {\n                scrabbleboard[index][0] = word[index]\n            }\n        }else{\n            console.error(\"erreur sur le sens !!!\")\n        }\n        \n        console.log(scrabbleboard)\n    }\n}\n\n\n\n//# sourceURL=webpack://scrabble/./assets/js/Init.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Init)\n/* harmony export */ });\n/* harmony import */ var _Board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Board */ \"./assets/js/Board.js\");\n/* harmony import */ var _Checklengthword__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Checklengthword */ \"./assets/js/Checklengthword.js\");\n\n\n\nconst rows = 15\n\nconst scrabbleboard = (0,_Board__WEBPACK_IMPORTED_MODULE_0__.default)(rows)\n\nfunction Init(){\n\n    document.addEventListener(\"DOMContentLoaded\",function(){  \n    \n        let word = prompt(\"Saisir un mot: \")\n        let sens = prompt(\"Sens pour le mot (de gauche vers la droite [LtoR] ou du haut vers le bas [UtoD]): \")\n\n        ;(0,_Checklengthword__WEBPACK_IMPORTED_MODULE_1__.default)(scrabbleboard,word,sens)\n\n        document.location.reload();\n        \n    })\n\n}\n\nInit()\n\n\n\n//# sourceURL=webpack://scrabble/./assets/js/Init.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_js_Init_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/js/Init.js */ \"./assets/js/Init.js\");\n\n\n(0,_assets_js_Init_js__WEBPACK_IMPORTED_MODULE_0__.default)()\n\n//# sourceURL=webpack://scrabble/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_js_Init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/js/Init */ \"./assets/js/Init.js\");\n\n\n\n//# sourceURL=webpack://scrabble/./src/index.js?");
 
 /***/ })
 

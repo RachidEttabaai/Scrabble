@@ -1,3 +1,1 @@
-import Init from "../assets/js/Init.js"
-
-Init()
+import Init from "../assets/js/Init"
